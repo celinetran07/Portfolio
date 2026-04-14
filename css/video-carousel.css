@@ -1,0 +1,286 @@
+/* ============================================================
+   CELINE TRAN — PORTFOLIO 2026
+   video-carousel.css — Work Preview Carousel
+   ============================================================ */
+
+/* ── SECTION WRAPPER ── */
+.vc-section {
+  padding: 80px var(--margin) 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.vc-eyebrow {
+  font-family: var(--grotesk);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--brand1);
+  margin-bottom: 32px;
+  display: block;
+}
+
+/* ── CAROUSEL STAGE ── */
+.vc-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;   
+  margin: 0 auto;
+}
+
+/* ── SCREEN ── */
+.vc-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--dark1);
+  box-shadow: 0 24px 64px rgba(59, 59, 59, 0.18);
+  cursor: none;
+}
+
+/* all slides stacked */
+.vc-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.vc-slide.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.vc-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── HOVER OVERLAY ── */
+.vc-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(59, 59, 59, 0.72) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px 32px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vc-screen:hover .vc-hover-overlay {
+  opacity: 1;
+}
+
+.vc-hover-title {
+  font-family: var(--bebas);
+  font-size: clamp(22px, 3vw, 36px);
+  letter-spacing: 0.04em;
+  color: white;
+  line-height: 1;
+}
+
+.vc-hover-tag {
+  font-family: var(--grotesk);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand2);
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ── PLAY ICON (shown when paused / not hovered) ── */
+.vc-play-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.vc-screen:hover .vc-play-hint {
+  opacity: 0;
+}
+
+.vc-play-hint svg {
+  width: 52px;
+  height: 52px;
+  fill: rgba(255, 255, 255, 0.55);
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  transition: fill 0.2s ease;
+}
+
+/* ── THUMBNAIL FALLBACK (for slides without video yet) ── */
+.vc-slide-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bebas);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ── ARROW BUTTONS ── */
+.vc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(248, 252, 222, 0.9);
+  border: 1.5px solid rgba(59,59,59,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  z-index: 10;
+  transition:
+    background 0.2s ease,
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.vc-arrow:hover {
+  background: var(--brand1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 24px rgba(131, 117, 255, 0.3);
+}
+
+.vc-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.vc-arrow svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--dark1);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s ease;
+}
+
+.vc-arrow:hover svg {
+  stroke: white;
+}
+
+.vc-arrow-prev { left: 12px; }
+.vc-arrow-next { right: 12px; }
+
+/* ── CAPTION BAR (below screen) ── */
+.vc-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 4px;
+}
+
+.vc-caption-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vc-caption-tag {
+  font-family: var(--grotesk);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand1);
+  transition: opacity 0.3s ease;
+}
+
+.vc-caption-title {
+  font-family: var(--bebas);
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--dark1);
+  line-height: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ── DOTS ── */
+.vc-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dark2);
+  opacity: 0.25;
+  cursor: none;
+  border: none;
+  padding: 0;
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.vc-dot.active {
+  opacity: 1;
+  background: var(--brand1);
+  transform: scale(1.4);
+}
+
+.vc-dot:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+/* ── CAPTION TRANSITION ── */
+.vc-caption-tag,
+.vc-caption-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.vc-caption.switching .vc-caption-tag,
+.vc-caption.switching .vc-caption-title {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1279px) {
+   
+}
+
+@media (max-width: 639px) {
+  .vc-arrow {
+    width: 38px;
+    height: 38px;
+  }
+   
+  .vc-caption-title { font-size: 18px; }
+}

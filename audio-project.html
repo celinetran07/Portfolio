@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/logo_flower.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Morning Shower Montage — Celine Tran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/creative-project.css">
+  <style>
+    .audio-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 60px var(--margin) 100px;
+    }
+
+    .audio-cover {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg, var(--brand1), rgba(131,117,255,0.4));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .audio-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .audio-cover-placeholder {
+      font-family: var(--bebas);
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .audio-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .audio-cover {
+        max-width: 320px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="page-decos">
+    <div class="deco deco-1"></div><div class="deco deco-2"></div>
+    <div class="deco deco-3"></div><div class="deco deco-4"></div>
+    <div class="deco deco-5"></div><div class="deco deco-6"></div>
+  </div>
+  <div id="cursor"></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="work.html"  class="nav-link">WORK</a>
+      </div>
+      <a href="home.html" class="nav-logo">CT</a>
+      <div class="nav-right">
+        <a href="creative.html" class="nav-link active">CREATIVE</a>
+        <a href="#home-contact" class="nav-link">CONTACT</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="mobile-close">×</button>
+     <a href="home.html" class="mobile-nav-link">HOME</a>
+    <a href="about.html"    class="mobile-nav-link">ABOUT</a>
+    <a href="work.html"     class="mobile-nav-link">WORK</a>
+    <a href="creative.html" class="mobile-nav-link active">CREATIVE</a>
+    <a href="#home-contact"  class="mobile-nav-link">CONTACT</a>
+  </div>
+
+  <div style="padding-top:4em;">
+
+    <div class="cp-header has-petals" style="background:var(--brand1);">
+      <a href="creative.html" class="cp-back" style="color:rgba(255,255,255,0.5);">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Creative
+      </a>
+      <p class="section-eyebrow" style="color:rgba(255,255,255,0.6);">Audio — 2024</p>
+      <h1 class="section-title" style="color:white;">Morning Shower Montage</h1>
+      <div class="cp-meta">
+        <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
+          <strong style="color:rgba(255,255,255,0.4);">Tools</strong>
+          Adobe Audition, Audacity
+        </div>
+        <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
+          <strong style="color:rgba(255,255,255,0.4);">Medium</strong>
+          Field Recording, Audio Editing
+        </div>
+        <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
+          <strong style="color:rgba(255,255,255,0.4);">Year</strong>
+          2024
+        </div>
+        <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
+          <strong style="color:rgba(255,255,255,0.4);">Type</strong>
+          Creative Audio
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-desc">
+      <p>A sound montage assembled from recordings captured in a bathroom — water running, surfaces, echoes, the ambient noise of an everyday private space. The piece explores the sonic texture of a room that is rarely listened to deliberately, turning the mundane into something worth attending to.</p>
+    </div>
+
+    <div class="audio-layout">
+
+      <div class="audio-cover">
+        <img
+          src="assets/audio_project/audio_cover.png"
+          alt="Bathroom Montage"
+          onerror="this.style.display='none'"
+        >
+      </div>
+
+      <div class="cp-audio-inner">
+        <p class="cp-audio-title">Morning Shower Montage</p>
+        <p class="cp-audio-sub">2024 · Adobe Audition & Audacity</p>
+        <audio controls style="width:100%;margin-top:20px;border-radius:8px;">
+          <source src="assets/audio_project/project 1_celine.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+    </div>
+  </div>
+<div class="contact-divider">
+  <div class="contact-divider-track">
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+    <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
+  </div>
+</div>
+
+<section class="home-contact" id="home-contact">
+  <h2 class="home-contact-tagline">
+    Let's make something <span>Fun.</span>
+  </h2>
+  <div class="contact-body-wrap">
+    <div class="contact-links-col">
+      <h2 class="contact-info-title">Connect with me</h2>
+      <a href="mailto:celinetran707@gmail.com" class="contact-link-item">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-link-text">
+          <p class="contact-link-label">Email</p>
+          <p class="contact-link-value">celinetran707@gmail.com</p>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/c%C3%A9line-tran-9b5b03263/" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div class="contact-link-text">
+          <p class="contact-link-label">LinkedIn</p>
+          <p class="contact-link-value">Céline Tran</p>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://github.com/celinetran07" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+        <div class="contact-link-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </div>
+        <div class="contact-link-text">
+          <p class="contact-link-label">GitHub</p>
+          <p class="contact-link-value">github.com/celinetran07</p>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+    </div>
+    <div class="contact-flower-col">
+      <canvas id="contact-flower-canvas"></canvas>
+    </div>
+  </div>
+  <p class="home-contact-copy">© 2026 Celine Tran. All rights reserved.</p>
+</section>
+
+<script src="js/contact.js"></script>
+  
+
+  <script src="js/main.js"></script>
+</div>
+</body>
+</html>
