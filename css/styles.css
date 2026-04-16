@@ -409,12 +409,17 @@ footer {
   0%,100% { width: 40px; opacity: 0.4; }
   50%     { width: 60px; opacity: 1; }
 }
+
 .fade-up {
-  opacity: 0; transform: translateY(24px);
-  transition: opacity 0.5s ease,
-              transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
 }
-.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ════════════════════════
    PAGE: HOME (home.html)
@@ -479,6 +484,83 @@ footer {
   animation: fadeUp 0.6s ease forwards 0.9s;
   white-space: nowrap;
 }
+
+
+/* ── PROJECT NAVIGATION ── */
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px var(--margin);
+  padding-bottom: 120px;
+}
+
+.proj-prev,
+.proj-next {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: var(--grotesk);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark2);
+  transition: color 0.8s ease;
+}
+
+.proj-prev:hover,
+.proj-next:hover { color: var(--brand1); }
+
+.proj-prev svg,
+.proj-next svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.proj-nav-label {
+  font-family: var(--grotesk);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand1);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.proj-prev-label,
+.proj-next-label {
+  font-family: var(--bebas);
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: inherit;
+  display: block;
+}
+
+body.contact-visible .proj-prev,
+body.contact-visible .proj-next {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body.contact-visible .proj-prev:hover,
+body.contact-visible .proj-next:hover {
+  color: var(--brand2);
+}
+
+body.contact-visible .proj-nav-label {
+  color: var(--brand2);
+}
+
+body.contact-visible .project-nav {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.proj-next .proj-nav-text { text-align: right; }
 
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.3; transform: scaleY(1); }
@@ -826,7 +908,7 @@ footer {
   color: white;
   line-height: 1;
   padding: 0 var(--margin);
-  margin-top: 60px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -840,8 +922,8 @@ footer {
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.08em;
   padding: 0 var(--margin);
-  margin-top: 40px;
   text-align: right;
+  margin-top: 40px;
 }
     .contact-tagline {
       font-family: var(--bebas);
@@ -1099,14 +1181,6 @@ footer {
   color: white;
 }
 
-.home-contact-copy {
-  font-family: var(--grotesk);
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.3);
-  letter-spacing: 0.08em;
-  margin-top: 40px;
-}
-
 /* ── BODY COLOUR TRANSITION ── */
 body {
   transition: background-color 0.8s ease;
@@ -1141,7 +1215,17 @@ body.contact-visible {
   padding: 28px 0;
   background: transparent;
 }
+body.contact-visible .btn-all-work {
+  color: white;
+  border-color: white;
+}
 
+body.contact-visible .btn-all-work:hover {
+  color: var(--brand2);
+  border-color: var(--brand2);
+  box-shadow: 0 0 0 5px rgba(230,242,166,0.2), 0 8px 20px rgba(230,242,166,0.3);
+  filter: none;
+}
 .contact-divider-track {
   display: flex;
   align-items: center;

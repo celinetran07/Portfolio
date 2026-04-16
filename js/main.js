@@ -124,19 +124,29 @@ window.addEventListener("scroll", () => {
 /* ── FADE UP ON SCROLL ── */
 const fadeObserver = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add("visible"), i * 120);
-        fadeObserver.unobserve(entry.target);
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
       }
     });
   },
   {
     threshold: 0.3,
-    rootMargin:
-      "0px 0px -150px 0px" /* card must be 100px inside viewport before triggering */,
+    rootMargin: '0px 0px -100px 0px',
   },
 );
+
+document.querySelectorAll('.fade-up').forEach((el) => fadeObserver.observe(el));
+
+/* ── TRIGGER FADE-UPS ALREADY IN VIEW ON LOAD ── */
+document.querySelectorAll('.fade-up').forEach(el => {
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.9) {
+    el.classList.add('visible');
+  }
+});
 
 document.querySelectorAll(".fade-up").forEach((el) => fadeObserver.observe(el));
 
@@ -152,6 +162,7 @@ document.querySelectorAll(".card").forEach((card) => {
     card.style.transform = "";
   });
 });
+
 
 /* ── PROJECT MODAL (work + home pages) ── */
 const modal = document.getElementById("project-modal");
@@ -239,7 +250,7 @@ document.querySelectorAll('.mobile-nav-link[href^="#"]').forEach(link => {
 /* ── TYPEWRITER (home page only) ── */
 const twEl = document.getElementById("typewriter");
 if (twEl) {
-  const words = ["UI/UX", "games", "websites"];
+  const words = ["UI/UX", "games", "websites", "experiences", "3D worlds"];
   let wi = 0,
     ci = 0,
     deleting = false;
@@ -327,3 +338,34 @@ petalTargets.forEach((target) => {
   for (let i = 0; i < 8; i++) setTimeout(spawnPetal, i * 400);
   setInterval(spawnPetal, 1000);
 });
+
+
+/* ── PROJECT NAVIGATION ── */
+const projectOrder = [
+  { title: 'Live Coding Performance', url: 'musical-performance.html' },
+  { title: 'Split Decision',        url: 'split-decision.html' },
+  { title: 'The Encrypted Forest',  url: 'encrypted-forest.html' },
+  
+];
+
+const projectNav = document.getElementById('project-nav');
+if (projectNav) {
+  const current = projectNav.dataset.current;
+  const index = projectOrder.findIndex(p => p.url === current);
+  const prev = projectOrder[index - 1];
+  const next = projectOrder[index + 1];
+
+  if (prev) {
+    projectNav.querySelector('.proj-prev').href = prev.url;
+    projectNav.querySelector('.proj-prev-label').textContent = prev.title;
+  } else {
+    projectNav.querySelector('.proj-prev').style.visibility = 'hidden';
+  }
+
+  if (next) {
+    projectNav.querySelector('.proj-next').href = next.url;
+    projectNav.querySelector('.proj-next-label').textContent = next.title;
+  } else {
+    projectNav.querySelector('.proj-next').style.visibility = 'hidden';
+  }
+}
