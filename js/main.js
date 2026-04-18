@@ -126,25 +126,25 @@ const fadeObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
       } else {
-        entry.target.classList.remove('visible');
+        entry.target.classList.remove("visible");
       }
     });
   },
   {
     threshold: 0.3,
-    rootMargin: '0px 0px -100px 0px',
+    rootMargin: "0px 0px -100px 0px",
   },
 );
 
-document.querySelectorAll('.fade-up').forEach((el) => fadeObserver.observe(el));
+document.querySelectorAll(".fade-up").forEach((el) => fadeObserver.observe(el));
 
 /* ── TRIGGER FADE-UPS ALREADY IN VIEW ON LOAD ── */
-document.querySelectorAll('.fade-up').forEach(el => {
+document.querySelectorAll(".fade-up").forEach((el) => {
   const rect = el.getBoundingClientRect();
   if (rect.top < window.innerHeight * 0.9) {
-    el.classList.add('visible');
+    el.classList.add("visible");
   }
 });
 
@@ -162,7 +162,6 @@ document.querySelectorAll(".card").forEach((card) => {
     card.style.transform = "";
   });
 });
-
 
 /* ── PROJECT MODAL (work + home pages) ── */
 const modal = document.getElementById("project-modal");
@@ -240,10 +239,10 @@ if (contactForm) {
 }
 
 /* ── CLOSE MOBILE MENU ON ANCHOR CLICK ── */
-document.querySelectorAll('.mobile-nav-link[href^="#"]').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
+document.querySelectorAll('.mobile-nav-link[href^="#"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("open");
+    mobileMenu.classList.remove("open");
   });
 });
 
@@ -339,33 +338,61 @@ petalTargets.forEach((target) => {
   setInterval(spawnPetal, 1000);
 });
 
+/* ── CREATIVE NAVIGATION ── */
+const creativeOrder = [
+  { title: "Nail Designs", url: "nail-art.html" },
+  { title: "Bathroom Montage", url: "audio-project.html" },
+  { title: "Is a Body a City?", url: "video-project.html" },
+  { title: "Oak Shelf", url: "woodwork.html" },
+];
+
+const creativeNav = document.getElementById("creative-nav");
+if (creativeNav) {
+  const current = creativeNav.dataset.current;
+  const index = creativeOrder.findIndex((p) => p.url === current);
+  const prev = creativeOrder[index - 1];
+  const next = creativeOrder[index + 1];
+
+  if (prev) {
+    creativeNav.querySelector(".proj-prev").href = prev.url;
+    creativeNav.querySelector(".proj-prev-label").textContent = prev.title;
+  } else {
+    creativeNav.querySelector(".proj-prev").style.visibility = "hidden";
+  }
+
+  if (next) {
+    creativeNav.querySelector(".proj-next").href = next.url;
+    creativeNav.querySelector(".proj-next-label").textContent = next.title;
+  } else {
+    creativeNav.querySelector(".proj-next").style.visibility = "hidden";
+  }
+}
 
 /* ── PROJECT NAVIGATION ── */
 const projectOrder = [
-  { title: 'Live Coding Performance', url: 'musical-performance.html' },
-  { title: 'Split Decision',        url: 'split-decision.html' },
-  { title: 'The Encrypted Forest',  url: 'encrypted-forest.html' },
-  
+  { title: "Live Coding Performance", url: "musical-performance.html" },
+  { title: "Split Decision", url: "split-decision.html" },
+  { title: "The Encrypted Forest", url: "encrypted-forest.html" },
 ];
 
-const projectNav = document.getElementById('project-nav');
+const projectNav = document.getElementById("project-nav");
 if (projectNav) {
   const current = projectNav.dataset.current;
-  const index = projectOrder.findIndex(p => p.url === current);
+  const index = projectOrder.findIndex((p) => p.url === current);
   const prev = projectOrder[index - 1];
   const next = projectOrder[index + 1];
 
   if (prev) {
-    projectNav.querySelector('.proj-prev').href = prev.url;
-    projectNav.querySelector('.proj-prev-label').textContent = prev.title;
+    projectNav.querySelector(".proj-prev").href = prev.url;
+    projectNav.querySelector(".proj-prev-label").textContent = prev.title;
   } else {
-    projectNav.querySelector('.proj-prev').style.visibility = 'hidden';
+    projectNav.querySelector(".proj-prev").style.visibility = "hidden";
   }
 
   if (next) {
-    projectNav.querySelector('.proj-next').href = next.url;
-    projectNav.querySelector('.proj-next-label').textContent = next.title;
+    projectNav.querySelector(".proj-next").href = next.url;
+    projectNav.querySelector(".proj-next-label").textContent = next.title;
   } else {
-    projectNav.querySelector('.proj-next').style.visibility = 'hidden';
+    projectNav.querySelector(".proj-next").style.visibility = "hidden";
   }
 }
