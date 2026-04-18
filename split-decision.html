@@ -6,9 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Split Decision — Celine Tran</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/creative-project.css">
   <link rel="stylesheet" href="css/video-carousel.css">
@@ -16,66 +14,30 @@
 
 <body>
   <div class="page-wrap">
-    <div class="page-decos">
-      <div class="deco deco-1"></div>
-      <div class="deco deco-2"></div>
-      <div class="deco deco-3"></div>
-      <div class="deco deco-4"></div>
-      <div class="deco deco-5"></div>
-      <div class="deco deco-6"></div>
-    </div>
+    <div id="page-decos-placeholder"></div>
     <div id="cursor"></div>
-
-    <nav id="navbar">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a href="about.html" class="nav-link">ABOUT</a>
-          <a href="work.html" class="nav-link active">WORK</a>
-        </div>
-        <a href="home.html" class="nav-logo">CT</a>
-        <div class="nav-right">
-          <a href="creative.html" class="nav-link">CREATIVE</a>
-          <a href="#home-contact" class="nav-link">CONTACT</a>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <div class="mobile-menu" id="mobile-menu">
-      <button class="close-btn" id="mobile-close">×</button>
-      <a href="home.html" class="mobile-nav-link">HOME</a>
-      <a href="about.html" class="mobile-nav-link">ABOUT</a>
-      <a href="work.html" class="mobile-nav-link active">WORK</a>
-      <a href="creative.html" class="mobile-nav-link">CREATIVE</a>
-      <a href="#home-contact" class="mobile-nav-link">CONTACT</a>
-    </div>
+    <div id="nav-placeholder"></div>
 
     <div style="padding-top:4em;">
 
       <div class="cp-header has-petals"
-        style="background:var(--brand2); background-image:url('assets/split_decision/SplitDecision_cover.png'); background-position: bottom; background-size: cover;">
+        style="background:var(--brand2); background-image:url('assets/split_decision/SplitDecision_cover.png'); background-position:bottom; background-size:cover;">
         <a href="work.html" class="cp-back" style="color:var(--dark2);">
-          <svg viewBox="0 0 24 24">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
           Back to Work
         </a>
         <p class="section-eyebrow" style="color:var(--brand1);">UX / UI Design & Web Development — 2025</p>
         <h1 class="section-title" style="color:var(--dark1);">Split Decision</h1>
         <div class="cp-meta">
           <div class="cp-meta-item" style="color:var(--dark2);">
-            <strong>Tools</strong>
-            Figma, HTML, CSS, JavaScript, Python (Flask), MongoDB
+            <strong>Tools</strong>Figma, HTML, CSS, JavaScript, Python (Flask), MongoDB
           </div>
           <div class="cp-meta-item" style="color:var(--dark2);">
-            <strong>Year</strong>
-            2025
+            <strong>Year</strong>2025
           </div>
         </div>
       </div>
 
-      <!-- Thesis -->
       <div class="cp-desc">
         <p class="work-section-label">Thesis</p>
         <p>How can a digital tool reduce the social friction of group decision-making, turning planning fatigue into
@@ -93,7 +55,7 @@
           for something more casual, mobile-first, and game-like. I explored game mechanics including elimination
           rounds, polls, wheel spinning, Rock Paper Scissors, coin flips, and tournament-style voting before narrowing
           to the features that felt most natural for friend groups. A user persona "Sacha Chacha", a social but
-          planning-fatigued university student,anchored all design decisions.</p>
+          planning-fatigued university student, anchored all design decisions.</p>
       </div>
 
       <div class="cp-desc" style="padding-top:40px;">
@@ -101,8 +63,7 @@
         <p>I led UI/UX design, game logic implementation, and both rounds of usability testing. I conducted user
           interviews, built empathy maps, and created the lo-fi and hi-fi Figma prototypes for the main page, poll page,
           decision page, and join game page. I also handled deployment on Render and implemented the Rock-Paper-Scissors
-          game logic, which went through two full redesigns after testing revealed a critical save-state confusion bug.
-        </p>
+          game logic, which went through two full redesigns after testing revealed a critical save-state confusion bug.</p>
         <p style="margin-top:16px;">The project went through two formal testing cycles: one on the Figma prototype and
           one on the fully deployed website, with feedback directly driving each iteration.</p>
       </div>
@@ -114,130 +75,74 @@
           with confetti winner reveal, an asynchronous Rock-Paper-Scissors system, a shared availability calendar, and a
           team-randomizer. The application is mobile-first, designed to be used in moments of social planning, on the
           go, in real time, with minimal friction.</p>
-
-        <!-- Credits -->
-        <p style="padding-top:40px;padding-bottom:60px;">
-          In collaboration with Cathy Tham.
-        </p>
+        <p style="padding-top:40px;padding-bottom:60px;">In collaboration with Cathy Tham.</p>
       </div>
 
-      <div style="padding: 0 var(--margin) 60px;">
+      <div style="padding:0 var(--margin) 60px;">
         <div class="vc-stage">
           <div class="vc-screen">
 
             <div class="vc-slide active" data-title="Availability Calendar" data-tag="When Are You Free">
               <video src="assets/split_decision/create_event.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">When Are You Free</span>
-                  <div class="vc-hover-title">Availability Calendar</div>
-                </div>
+                <div><span class="vc-hover-tag">When Are You Free</span><div class="vc-hover-title">Availability Calendar</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="Spinning Wheel" data-tag="Let's Decide">
               <video src="assets/split_decision/spin_the_wheel.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Let's Decide</span>
-                  <div class="vc-hover-title">Spinning Wheel</div>
-                </div>
+                <div><span class="vc-hover-tag">Let's Decide</span><div class="vc-hover-title">Spinning Wheel</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="Rock Paper Scissors" data-tag="Game Logic">
               <video src="assets/split_decision/rps.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Game Logic</span>
-                  <div class="vc-hover-title">Rock Paper Scissors</div>
-                </div>
+                <div><span class="vc-hover-tag">Game Logic</span><div class="vc-hover-title">Rock Paper Scissors</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="Horse Racing" data-tag="Game Feature">
               <video src="assets/split_decision/horseracing.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Game Feature</span>
-                  <div class="vc-hover-title">Horse Racing</div>
-                </div>
+                <div><span class="vc-hover-tag">Game Feature</span><div class="vc-hover-title">Horse Racing</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="About" data-tag="Onboarding">
               <video src="assets/split_decision/about.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Onboarding</span>
-                  <div class="vc-hover-title">About</div>
-                </div>
+                <div><span class="vc-hover-tag">Onboarding</span><div class="vc-hover-title">About</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="Create Team" data-tag="Team Setup">
               <video src="assets/split_decision/create_team.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Team Setup</span>
-                  <div class="vc-hover-title">Create Team</div>
-                </div>
+                <div><span class="vc-hover-tag">Team Setup</span><div class="vc-hover-title">Create Team</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
 
             <div class="vc-slide" data-title="Poll" data-tag="Decision Feature">
               <video src="assets/split_decision/poll.mp4" muted playsinline preload="none"></video>
               <div class="vc-hover-overlay">
-                <div>
-                  <span class="vc-hover-tag">Decision Feature</span>
-                  <div class="vc-hover-title">Poll</div>
-                </div>
+                <div><span class="vc-hover-tag">Decision Feature</span><div class="vc-hover-title">Poll</div></div>
               </div>
-              <div class="vc-play-hint">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 3l14 9-14 9V3z" />
-                </svg>
-              </div>
+              <div class="vc-play-hint"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
             </div>
+
             <button class="vc-arrow vc-arrow-prev" aria-label="Previous">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
             <button class="vc-arrow vc-arrow-next" aria-label="Next">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 6 15 12 9 18" />
-              </svg>
+              <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
             </button>
 
           </div>
@@ -259,121 +164,40 @@
           </div>
         </div>
       </div>
-      <!-- Links -->
-      <div style="padding:0 var(--margin) 40px; display:flex; gap:16px; flex-wrap:wrap; padding-bottom: 0;">
-        <a href="https://calendar-availability.onrender.com/" target="_blank" rel="noopener noreferrer"
-          class="btn btn-primary">View Live Site →</a>
-        <a href="https://www.figma.com/design/xkOTwxkXTTieM5W4xor3fn/SplitDecision-Wireframe?node-id=0-1&p=f"
-          target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Figma Prototype →</a>
+
+      <div style="padding:0 var(--margin) 40px; display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="https://calendar-availability.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Site →</a>
+        <a href="https://www.figma.com/design/xkOTwxkXTTieM5W4xor3fn/SplitDecision-Wireframe?node-id=0-1&p=f" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Figma Prototype →</a>
       </div>
+
     </div>
 
     <div class="project-nav" id="project-nav" data-current="split-decision.html">
       <a href="#" class="proj-prev">
-        <svg viewBox="0 0 24 24">
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         <div class="proj-nav-text">
           <span class="proj-nav-label">Previous</span>
           <span class="proj-prev-label"></span>
         </div>
       </a>
       <a href="#" class="proj-next">
-        <div class="proj-nav-text proj-nav-text--right" style="text-align:right;">
+        <div class="proj-nav-text" style="text-align:right;">
           <span class="proj-nav-label">Next</span>
           <span class="proj-next-label"></span>
         </div>
-        <svg viewBox="0 0 24 24">
-          <polyline points="9 6 15 12 9 18" />
-        </svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
       </a>
     </div>
 
-    <div class="contact-divider">
-      <div class="contact-divider-track">
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-      </div>
-    </div>
-
-    <section class="home-contact" id="home-contact">
-      <h2 class="home-contact-tagline">
-        Let's make something <span>Fun.</span>
-      </h2>
-      <div class="contact-body-wrap">
-        <div class="contact-links-col">
-          <h2 class="contact-info-title">Connect with me</h2>
-          <a href="mailto:celinetran707@gmail.com" class="contact-link-item">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">Email</p>
-              <p class="contact-link-value">celinetran707@gmail.com</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-          <a href="https://www.linkedin.com/in/c%C3%A9line-tran-9b5b03263/" class="contact-link-item" target="_blank"
-            rel="noopener noreferrer">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">LinkedIn</p>
-              <p class="contact-link-value">Céline Tran</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-          <a href="https://github.com/celinetran07" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">GitHub</p>
-              <p class="contact-link-value">github.com/celinetran07</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-        </div>
-        <div class="contact-flower-col">
-          <canvas id="contact-flower-canvas"></canvas>
-        </div>
-      </div>
-      <p class="home-contact-copy">© 2026 Celine Tran. All rights reserved.</p>
-    </section>
-
-    <script src="js/contact.js"></script>
-
-
-
-    <script src="js/main.js"></script>
-    <script src="js/video-carousel.js"></script>
+    <div id="contact-divider-placeholder"></div>
+    <div id="contact-placeholder"></div>
 
   </div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/video-carousel.js"></script>
 </body>
 
 </html>

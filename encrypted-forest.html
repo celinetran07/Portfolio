@@ -6,79 +6,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>The Encrypted Forest — Celine Tran</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/creative-project.css">
 </head>
 
 <body>
   <div class="page-wrap">
-    <div class="page-decos">
-      <div class="deco deco-1"></div>
-      <div class="deco deco-2"></div>
-      <div class="deco deco-3"></div>
-      <div class="deco deco-4"></div>
-      <div class="deco deco-5"></div>
-      <div class="deco deco-6"></div>
-    </div>
+    <div id="page-decos-placeholder"></div>
     <div id="cursor"></div>
-
-    <nav id="navbar">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a href="about.html" class="nav-link">ABOUT</a>
-          <a href="work.html" class="nav-link active">WORK</a>
-        </div>
-        <a href="home.html" class="nav-logo">CT</a>
-        <div class="nav-right">
-          <a href="creative.html" class="nav-link">CREATIVE</a>
-          <a href="#home-contact" class="nav-link">CONTACT</a>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <div class="mobile-menu" id="mobile-menu">
-      <button class="close-btn" id="mobile-close">×</button>
-      <a href="home.html" class="mobile-nav-link">HOME</a>
-      <a href="about.html" class="mobile-nav-link">ABOUT</a>
-      <a href="work.html" class="mobile-nav-link active">WORK</a>
-      <a href="creative.html" class="mobile-nav-link">CREATIVE</a>
-      <a href="#home-contact" class="mobile-nav-link">CONTACT</a>
-    </div>
+    <div id="nav-placeholder"></div>
 
     <div style="padding-top:4em;">
 
       <div class="cp-header has-petals" data-petal-color="rgba(255,255,255,0.5)"
         style="background:#1a2a1a; background-image:url('assets/encrypted_forest/EdSplash.png');">
         <a href="work.html" class="cp-back" style="color:rgba(255,255,255,0.5);">
-          <svg viewBox="0 0 24 24">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
           Back to Work
         </a>
         <p class="section-eyebrow" style="color:#7ecf7e;">Game Design & 3D Development — 2025</p>
         <h1 class="section-title" style="color:white;">The Encrypted Forest</h1>
         <div class="cp-meta">
           <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
-            <strong style="color:rgba(255,255,255,0.4);">Tools</strong>
-            Unreal Engine, Blender
+            <strong style="color:rgba(255,255,255,0.4);">Tools</strong>Unreal Engine, Blender
           </div>
           <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
-            <strong style="color:rgba(255,255,255,0.4);">Type</strong>
-            Interactive Game Experience
+            <strong style="color:rgba(255,255,255,0.4);">Type</strong>Interactive Game Experience
           </div>
           <div class="cp-meta-item" style="color:rgba(255,255,255,0.6);">
-            <strong style="color:rgba(255,255,255,0.4);">Year</strong>
-            2025
+            <strong style="color:rgba(255,255,255,0.4);">Year</strong>2025
           </div>
         </div>
       </div>
 
-      <!-- Thesis -->
       <div class="cp-desc">
         <p class="work-section-label">Thesis</p>
         <p>The Encrypted Forest asks how surveillance systems disguise themselves
@@ -88,7 +49,6 @@
           Nadim Samman's Poetics of Encryption.</p>
       </div>
 
-      <!-- Ideation -->
       <div class="cp-desc" style="padding-top:40px;">
         <p class="work-section-label">Ideation</p>
         <p>The concept started with the question of where people place unconditional
@@ -105,7 +65,6 @@
           one object at a time.</p>
       </div>
 
-      <!-- Approach -->
       <div class="cp-desc" style="padding-top:40px;">
         <p class="work-section-label">Approach</p>
         <p>I was responsible for building and assembling the full environment in
@@ -120,7 +79,6 @@
           third-person gameplay experience.</p>
       </div>
 
-      <!-- Creative Works -->
       <div class="cp-desc" style="padding-top:40px;padding-bottom:60px;">
         <p class="work-section-label">Creative Works</p>
         <p>The final work is a third-person exploratory game experience in which
@@ -130,26 +88,17 @@
           The experience ends with a confrontation and dissolution sequence, a
           visual and narrative crescendo that connects the opening thesis back to
           the player's own complicity in the world they explored. Target
-          playtime is 5 to 7 minutes.
-
-        </p>
-
-        <!-- Credits -->
-        <p style="padding-top:40px;">
-          In collaboration with Cathy Tham.
-        </p>
+          playtime is 5 to 7 minutes.</p>
+        <p style="padding-top:40px;">In collaboration with Cathy Tham.</p>
       </div>
 
-      <!-- Video embed -->
-      <div class="cp-video-wrap" style="padding-bottom: 0;">
-
-        <video controls poster="assets/encrypted_forest/encrypted_forest_cover.png" style="object-fit: cover;">
-          <source src="https://res.cloudinary.com/djjiys00k/video/upload/encrypted_forest_preview_zirsco.mp4"
-            type="video/mp4">
+      <div class="cp-video-wrap" style="padding-bottom:0;">
+        <video controls poster="assets/encrypted_forest/encrypted_forest_cover.png" style="object-fit:cover;">
+          <source src="https://res.cloudinary.com/djjiys00k/video/upload/encrypted_forest_preview_zirsco.mp4" type="video/mp4">
         </video>
       </div>
 
-      <div class="cp-gallery" style="padding-bottom: 0;">
+      <div class="cp-gallery" style="padding-bottom:0;">
         <div class="cp-thumb fade-up" data-index="0">
           <img src="assets/encrypted_forest/environment.png" alt="The Encrypted Forest Screenshot 1">
           <div class="cp-overlay"><span>View</span></div>
@@ -168,9 +117,7 @@
 
     <div class="project-nav" id="project-nav" data-current="encrypted-forest.html">
       <a href="#" class="proj-prev">
-        <svg viewBox="0 0 24 24">
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         <div class="proj-nav-text">
           <span class="proj-nav-label">Previous</span>
           <span class="proj-prev-label"></span>
@@ -181,89 +128,12 @@
           <span class="proj-nav-label">Next</span>
           <span class="proj-next-label"></span>
         </div>
-        <svg viewBox="0 0 24 24">
-          <polyline points="9 6 15 12 9 18" />
-        </svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
       </a>
     </div>
-    <div class="contact-divider">
-      <div class="contact-divider-track">
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-        <span class="contact-divider-item">Contact <span class="contact-divider-flower">✿</span></span>
-      </div>
-    </div>
 
-    <section class="home-contact" id="home-contact">
-      <h2 class="home-contact-tagline">
-        Let's make something <span>Fun.</span>
-      </h2>
-      <div class="contact-body-wrap">
-        <div class="contact-links-col">
-          <h2 class="contact-info-title">Connect with me</h2>
-          <a href="mailto:celinetran707@gmail.com" class="contact-link-item">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">Email</p>
-              <p class="contact-link-value">celinetran707@gmail.com</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-          <a href="https://www.linkedin.com/in/c%C3%A9line-tran-9b5b03263/" class="contact-link-item" target="_blank"
-            rel="noopener noreferrer">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">LinkedIn</p>
-              <p class="contact-link-value">Céline Tran</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-          <a href="https://github.com/celinetran07" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-            <div class="contact-link-icon">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
-            </div>
-            <div class="contact-link-text">
-              <p class="contact-link-label">GitHub</p>
-              <p class="contact-link-value">github.com/celinetran07</p>
-            </div>
-            <span class="contact-link-arrow">→</span>
-          </a>
-        </div>
-        <div class="contact-flower-col">
-          <canvas id="contact-flower-canvas"></canvas>
-        </div>
-      </div>
-      <p class="home-contact-copy">© 2026 Celine Tran. All rights reserved.</p>
-    </section>
-
-    <script src="js/contact.js"></script>
+    <div id="contact-divider-placeholder"></div>
+    <div id="contact-placeholder"></div>
 
     <div class="lightbox" id="lightbox">
       <div class="lightbox-inner">
@@ -277,16 +147,19 @@
       </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script>
-      initLightbox([
-        'assets/encrypted_forest/environment.png',
-        'assets/encrypted_forest/head.png',
-        'assets/encrypted_forest/ghost.png',
-      ]);
-    </script>
   </div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script>
+    initLightbox([
+      'assets/encrypted_forest/environment.png',
+      'assets/encrypted_forest/head.png',
+      'assets/encrypted_forest/ghost.png',
+    ]);
+  </script>
 </body>
 
 </html>
