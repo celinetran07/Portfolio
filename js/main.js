@@ -323,7 +323,7 @@ petalTargets.forEach((target) => {
       position: absolute;
       pointer-events: none;
       opacity: 0;
-      z-index: 1;
+      z-index: 3;
       left: ${Math.random() * 100}%;
       font-size: ${14 + Math.random() * 18}px;
       color: ${color};
